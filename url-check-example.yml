@@ -1,11 +1,11 @@
 ---
 - name: Listen for events on a webhook
-  hosts: web
+  hosts: worker1.example.com
   ## Define our source for events
   sources:
      - ansible.eda.url_check:
         urls:
-          - http://webserver
+          - http://worker1.example.com
         delay: 10
 
   rules:
